@@ -22,13 +22,13 @@ import java.net.URLDecoder;
 import java.util.List;
 
 public class GetHttpCategoria extends AsyncTask<Void, Void, String> {
-    private List<CategoriaActivity> httpList;
+    private List<Categoria> httpList;
     private RecyclerView httpRecycler;
     private RecyclerView.Adapter httpAdapter;
     private Context httpContext;
     ProgressDialog progressDialog;
 
-    public GetHttpCategoria(List<CategoriaActivity> httpList, RecyclerView httpRecycler,
+    public GetHttpCategoria(List<Categoria> httpList, RecyclerView httpRecycler,
                             RecyclerView.Adapter httpAdapter, Context httpContext) {
         this.httpList = httpList;
         this.httpRecycler = httpRecycler;
@@ -84,7 +84,7 @@ public class GetHttpCategoria extends AsyncTask<Void, Void, String> {
             for (int i = 0; i < jsonArray.length(); i++) {
                 String Titulo = jsonArray.getJSONObject(i).getString("cTitulo");
                 String fotourl = jsonArray.getJSONObject(i).getString("cFotoUrl");
-                this.httpList.add(new CategoriaActivity(Titulo, fotourl));
+                this.httpList.add(new Categoria(Titulo, fotourl));
             }
             // Crear un nuevo adaptador
             httpAdapter = new CategoriaAdapter(this.httpList);
