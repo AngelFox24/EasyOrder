@@ -6,4 +6,12 @@
     android:layout_height="match_parent"
     tools:context=".Categoria.CategoriaActivity">
 
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/reciclador"
+        android:padding="10dp">
+
+    </android.support.v7.widget.RecyclerView>
+
 </android.support.constraint.ConstraintLayout>
