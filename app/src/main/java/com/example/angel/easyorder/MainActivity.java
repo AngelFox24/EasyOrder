@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity implements ZXingScannerView.
         setContentView(mScannerView);
         mScannerView.setResultHandler(this);
         mScannerView.startCamera();
+        //gola
     }
 
     @Override
