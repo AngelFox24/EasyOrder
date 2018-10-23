@@ -15,6 +15,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.angel.easyorder.R;
+import com.example.angel.easyorder.shopping_cart.Pedido;
+import com.example.angel.easyorder.shopping_cart.PedidoAdapter;
 import com.example.angel.easyorder.shopping_cart.Shopping_Cart;
 
 import java.util.ArrayList;
@@ -46,6 +48,10 @@ public class CategoriaActivity extends AppCompatActivity {
 
         adapter = new CategoriaAdapter(items);
         reciclador.setAdapter(adapter);
+
+
+
+
 
         //Toolbar
         Toolbar toolbar= (Toolbar) findViewById(R.id.toolbar);

@@ -5,9 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Producto.ProductoActivity">
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
     <android.support.v7.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="55dp"
         android:id="@+id/reciclador"
         android:padding="10dp">
 

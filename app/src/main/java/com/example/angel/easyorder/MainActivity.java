@@ -33,10 +33,7 @@ public class MainActivity extends AppCompatActivity implements ZXingScannerView.
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("EasyOrder");
-        toolbar.setLogo(R.drawable.chef44);
+
     }
 
     public void btnEscanear(View v) {

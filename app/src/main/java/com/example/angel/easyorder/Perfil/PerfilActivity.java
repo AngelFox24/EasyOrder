@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -44,6 +45,11 @@ public class PerfilActivity extends AppCompatActivity {
         titulo.setText(nombre);
         costo.setText("S/." + String.valueOf(precio));
         descripcion.setText(catego);
+
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("EasyOrder");
+        toolbar.setLogo(R.drawable.chef44);
 
         Picasso.with(foto2.getContext())
                 .load(foto).into(foto2);
