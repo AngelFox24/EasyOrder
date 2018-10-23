@@ -7,6 +7,7 @@ import android.support.v7.widget.CardView;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.widget.Adapter;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -26,25 +27,30 @@ public class CategoriaActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_categoria);
 
-      /*  reciclador=(RecyclerView) findViewById(R.id.reciclador);
+        Fill();
+
+        reciclador=(RecyclerView) findViewById(R.id.reciclador);
         reciclador.setHasFixedSize(true);
 
         lManager= new LinearLayoutManager(this);
         reciclador.setLayoutManager(lManager);
 
-        FillLibro();
+        adapter = new CategoriaAdapter(items);
+        reciclador.setAdapter(adapter);
+
 
     }
 
-    private void FillLibro() {
-        GetHttpCategoria wsLibros= new GetHttpCategoria(items,reciclador,adapter,this);
-        wsLibros.execute();
-
-
-        */
+    private void Fill() {
+        items.add(new Categoria("Desayunos","https://image.flaticon.com/icons/png/512/100/100022.png"));
+        items.add(new Categoria("Almuerzos","https://image.flaticon.com/icons/png/512/208/208029.png"));
+        items.add(new Categoria("Infusiones","http://www.portondelcielo.com/_images/servicios_desayuno.png"));
+        items.add(new Categoria("Postres","http://ginzarestobar.com.ar/wp-content/uploads/2018/01/icon-postres.png"));
     }
 
 }
