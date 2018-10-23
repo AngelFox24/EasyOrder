@@ -1,15 +1,31 @@
 package com.example.angel.easyorder.Categoria;
 
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
+public class Categoria {
 
-import com.example.angel.easyorder.R;
+    private String Titulo;
+    private String urlfoto;
 
-public class Categoria extends AppCompatActivity {
+    public String getTitulo() {
+        return Titulo;
+    }
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_categoria);
+    public void setTitulo(String titulo) {
+        Titulo = titulo;
+    }
+
+    public String getUrlfoto() {
+        return urlfoto;
+    }
+
+    public void setUrlfoto(String urlfoto) {
+        this.urlfoto = urlfoto;
+    }
+
+    public Categoria(String titulo, String urlfoto) {
+        this.Titulo = titulo;
+        this.urlfoto = urlfoto;
+    }
+
+    public Categoria() {
     }
 }
