@@ -59,9 +59,9 @@ public class ProductoActivity extends AppCompatActivity {
     }
 
     public void FillD() {
-        items.add(new Producto("Desayuno Americano", 12.00, "Beacon, huevo, tostada, panqueques, naranja", "https://cocina-casera.com/wp-content/uploads/2018/04/desayuno-americano-3.jpg"));
+        items.add(new Producto("Desayuno Americano", 12.00, "Beacon, huevo, tostada, panqueques, naranja", "https://cocina-casera.com/wp-content/uploads/2018/04/cena-americano-3.jpg"));
         items.add(new Producto("Desayuno Europeo", 12.00, "Lo más fino que nos puede ofrecer doña Isabel II", "http://s04.s3c.es/imag/_v0/770x420/2/a/d/breakfast-hotel-1921530_1920.jpg"));
-        items.add(new Producto("Desayuno Deluxe", 15.00, "El desayuno es la comida más importante del dia... y la más sabrosa", "https://st-listas.20minutos.es/images/2010-07/237493/2535101_640px.jpg?1331145463"));
+        items.add(new Producto("Desayuno Deluxe", 15.00, "El cena es la comida más importante del dia... y la más sabrosa", "https://st-listas.20minutos.es/images/2010-07/237493/2535101_640px.jpg?1331145463"));
     }
 
     public void FillI() {

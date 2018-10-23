@@ -47,6 +47,7 @@ public class CategoriaActivity extends AppCompatActivity {
         adapter = new CategoriaAdapter(items);
         reciclador.setAdapter(adapter);
 
+        //Toolbar
         Toolbar toolbar= (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("Menu del Dia");
