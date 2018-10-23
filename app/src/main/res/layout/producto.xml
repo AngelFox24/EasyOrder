@@ -21,14 +21,15 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:layout_marginLeft="3dp">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="TItulo"
             android:id="@+id/Titulo"
-            android:layout_margin="5dp"
+            android:layout_margin="3dp"
             android:textSize="25dp"
             android:textStyle="bold"
             android:layout_gravity="left"/>
@@ -38,7 +39,7 @@
             android:layout_height="wrap_content"
             android:text="Precio"
             android:id="@+id/Precio"
-            android:layout_margin="5dp"
+            android:layout_margin="3dp"
             android:textSize="20dp"
             android:layout_gravity="left"/>
 
@@ -47,7 +48,7 @@
             android:layout_height="wrap_content"
             android:text="Categoria"
             android:id="@+id/Categoria"
-            android:layout_margin="5dp"
+            android:layout_margin="3dp"
             android:textSize="20dp"
             android:layout_gravity="left"/>
 

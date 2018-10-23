@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.angel.easyorder.Perfil.PerfilActivity;
 import com.example.angel.easyorder.Producto.Producto;
 import com.example.angel.easyorder.Producto.ProductoActivity;
 import com.example.angel.easyorder.R;
@@ -69,7 +70,6 @@ public class CategoriaAdapter extends RecyclerView.Adapter<CategoriaAdapter.Libr
             @Override
             public void onClick(View v) {
                 Bundle bundle = new Bundle();
-                bundle.putString("vFoto", items.get(i).getUrlfoto());
                 bundle.putString("vNombre", items.get(i).getTitulo());
                 //Para otra ocasion joven
 
