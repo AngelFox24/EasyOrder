@@ -18,19 +18,41 @@
             android:layout_width="120dp"
             android:layout_height="120dp"
             android:id="@+id/imgFoto"/>
-
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="3dp">
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:text="TItulo"
             android:id="@+id/Titulo"
-            android:layout_margin="5dp"
-            android:textSize="20dp"
+            android:layout_margin="3dp"
+            android:textSize="25dp"
             android:textStyle="bold"
-            android:textAlignment="center"/>
+            android:layout_gravity="left"/>
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Precio"
+            android:id="@+id/Precio"
+            android:layout_margin="3dp"
+            android:textSize="20dp"
+            android:layout_gravity="left"/>
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Categoria"
+            android:id="@+id/Categoria"
+            android:layout_margin="3dp"
+            android:textSize="20dp"
+            android:layout_gravity="left"/>
+
+        </LinearLayout>
     </LinearLayout>
 
 </android.support.v7.widget.CardView>

@@ -1,5 +1,7 @@
 package com.example.angel.easyorder.Categoria;
 
+import android.content.Intent;
+import android.os.Bundle;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -8,6 +10,9 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.angel.easyorder.Perfil.PerfilActivity;
+import com.example.angel.easyorder.Producto.Producto;
+import com.example.angel.easyorder.Producto.ProductoActivity;
 import com.example.angel.easyorder.R;
 import com.squareup.picasso.Picasso;
 
@@ -61,21 +66,19 @@ public class CategoriaAdapter extends RecyclerView.Adapter<CategoriaAdapter.Libr
         viewHolder.Titulo.setText(items.get(i).getTitulo());
 
         //Implementando evento CLIC en el CardView
-        /*viewHolder.personCardView.setOnClickListener(new View.OnClickListener() {
+        viewHolder.libroCardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Bundle bundle = new Bundle();
-                bundle.putString("vFoto", items.get(i).getUrlfoto());
-                bundle.putString("vNombre", items.get(i).getNombre());
-                bundle.putString("vDNI", items.get(i).getDni());
-                bundle.putString("vBiografia", items.get(i).getBiografia());
+                bundle.putString("vNombre", items.get(i).getTitulo());
+                //Para otra ocasion joven
 
-                Intent newActivity = new Intent(v.getContext(), BioActivity.class);
+                Intent newActivity = new Intent(v.getContext(), ProductoActivity.class);
                 newActivity.putExtras(bundle);
                 v.getContext().startActivity(newActivity);
             }
         });
-        */
+
     }
 }
 

@@ -5,12 +5,97 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Perfil.PerfilActivity">
-    <android.support.v7.widget.RecyclerView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/reciclador"
-        android:padding="10dp">
+        android:orientation="vertical"
+        android:padding="5dp">
 
-    </android.support.v7.widget.RecyclerView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TItulo"
+            android:id="@+id/Titulo"
+            android:layout_margin="5dp"
+            android:textSize="40dp"
+            android:textStyle="bold"
+            android:textAlignment="center"/>
+
+
+        <ImageView
+            android:layout_width="286dp"
+            android:layout_height="200dp"
+            android:id="@+id/imgFoto"
+            android:layout_gravity="center"/>
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Descripcion"
+            android:layout_margin="5dp"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+            android:layout_margin="5dp"
+            android:textSize="18dp"
+            android:id="@+id/Descripcion"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Precio:"
+            android:layout_margin="5dp"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Precio"
+                android:textSize="20dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginLeft="4dp"
+                android:id="@+id/valor"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="12dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cantidad"
+                android:layout_margin="5dp"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:hint="Ingrese la cantidad que desee"
+                android:textAlignment="center"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Agregar al carro de compra"
+                android:layout_gravity="center"
+                android:layout_marginTop="12dp"
+                android:textSize="12dp"/>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>
