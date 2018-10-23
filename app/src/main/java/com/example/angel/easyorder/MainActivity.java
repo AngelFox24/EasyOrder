@@ -1,5 +1,6 @@
 package com.example.angel.easyorder;
 
+import android.content.Intent;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -9,6 +10,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.angel.easyorder.Categoria.CategoriaActivity;
 import com.google.android.gms.vision.barcode.Barcode;
 import com.google.zxing.Result;
 
@@ -29,18 +31,33 @@ public class MainActivity extends AppCompatActivity implements ZXingScannerView.
         myScanner.setResultHandler(this);
         myScanner.startCamera();
 
+
+
+
     }
 
 
     @Override
     public void handleResult(Result result) {
-        Log.v("HandleResult",result.getText());
+        /*Log.v("HandleResult",result.getText());
         AlertDialog.Builder builer=new AlertDialog.Builder(this);
         builer.setTitle("Resultado del scaner");
         builer.setMessage(result.getText());
         AlertDialog alerta=builer.create();
         alerta.show();
-        myScanner.stopCamera();
+        myScanner.stopCamera();*/
+
+        View v = new View(this);
+
+        Bundle Pa = new Bundle();
+        String a = result.getText().toString();
+        Pa.putString("resultado", a);
+
+        Intent Wii = new Intent(v.getContext(), CategoriaActivity.class);
+
+        v.getContext().startActivity(Wii);
+
+
         //myScanner.resumeCameraPreview(this);
 
 

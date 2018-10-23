@@ -27,9 +27,9 @@ public class CategoriaActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_categoria);
 
-        /*reciclador=(RecyclerView) findViewById(R.id.reciclador);
+      /*  reciclador=(RecyclerView) findViewById(R.id.reciclador);
         reciclador.setHasFixedSize(true);
 
         lManager= new LinearLayoutManager(this);
@@ -42,6 +42,9 @@ public class CategoriaActivity extends AppCompatActivity {
     private void FillLibro() {
         GetHttpCategoria wsLibros= new GetHttpCategoria(items,reciclador,adapter,this);
         wsLibros.execute();
-    */}
+
+
+        */
+    }
 
 }

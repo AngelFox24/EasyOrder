@@ -23,10 +23,9 @@
             android:name="com.google.android.gms.vision.DEPENDENCIES"
             android:value="barcode" />
 
-        <activity android:name=".Producto.Producto" />
-        <activity android:name=".Perfil.Perfil" />
-        <activity android:name=".Categoria.Categoria" />
-        <activity android:name=".shopping_cart.Shopping_Cart"></activity>
+        <activity android:name=".Producto.ProductoActivity" />
+        <activity android:name=".Perfil.PerfilActivity" />
+        <activity android:name=".Categoria.CategoriaActivity" />
     </application>
 
 </manifest>
