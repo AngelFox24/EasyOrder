@@ -25,7 +25,8 @@
 
         <activity android:name=".Producto.Producto" />
         <activity android:name=".Perfil.Perfil" />
-        <activity android:name=".Categoria.Categoria"></activity>
+        <activity android:name=".Categoria.Categoria" />
+        <activity android:name=".shopping_cart.Shopping_Cart"></activity>
     </application>
 
 </manifest>
