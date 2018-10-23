@@ -17,7 +17,7 @@ import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
-public class ProductoAdapter extends RecyclerView.Adapter<com.example.angel.easyorder.Producto.ProductoAdapter.LibroViewHolder>{
+public class ProductoAdapter extends RecyclerView.Adapter<com.example.angel.easyorder.Producto.ProductoAdapter.LibroViewHolder> {
 
     private List<Producto> items;
 
@@ -35,7 +35,7 @@ public class ProductoAdapter extends RecyclerView.Adapter<com.example.angel.easy
             libroCardView = (CardView) v.findViewById(R.id.libroCardView);
             imgFoto = (ImageView) v.findViewById(R.id.imgFoto);
             Titulo = (TextView) v.findViewById(R.id.Titulo);
-            precio =  (TextView) v.findViewById(R.id.Precio);
+            precio = (TextView) v.findViewById(R.id.Precio);
             cate = (TextView) v.findViewById(R.id.Categoria);
         }
     }
@@ -49,7 +49,7 @@ public class ProductoAdapter extends RecyclerView.Adapter<com.example.angel.easy
         this.items = items;
     }
 
-    public List<Producto> getItems(){
+    public List<Producto> getItems() {
         return this.items;
     }
 

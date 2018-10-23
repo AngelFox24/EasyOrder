@@ -6,12 +6,16 @@ import android.os.Bundle;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Adapter;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.angel.easyorder.R;
+import com.example.angel.easyorder.shopping_cart.Shopping_Cart;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -43,7 +47,26 @@ public class CategoriaActivity extends AppCompatActivity {
         adapter = new CategoriaAdapter(items);
         reciclador.setAdapter(adapter);
 
+        Toolbar toolbar= (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("Menu del Dia");
+        toolbar.setLogo(R.drawable.chef44);
 
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        super.onCreateOptionsMenu(menu);
+        getMenuInflater().inflate(R.menu.menu_main,menu);
+        menu.findItem(R.id.shopping).setIntent(new Intent(this,Shopping_Cart.class));
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        super.onOptionsItemSelected(item);
+        startActivity(item.getIntent());
+        return true;
     }
 
     private void Fill() {

@@ -37,7 +37,6 @@ public class GetHttpCategoria extends AsyncTask<Void, Void, String> {
     }
 
 
-
     @Override
     protected void onPreExecute() {
         super.onPreExecute();
@@ -79,7 +78,7 @@ public class GetHttpCategoria extends AsyncTask<Void, Void, String> {
         super.onPostExecute(s);
         progressDialog.dismiss();
         try {
-            JSONObject jsonObject = new JSONObject(URLDecoder.decode(s, "UTF-8" ));
+            JSONObject jsonObject = new JSONObject(URLDecoder.decode(s, "UTF-8"));
             JSONArray jsonArray = jsonObject.getJSONArray("libros");
             for (int i = 0; i < jsonArray.length(); i++) {
                 String Titulo = jsonArray.getJSONObject(i).getString("cTitulo");

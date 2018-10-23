@@ -30,12 +30,10 @@ public class PerfilActivity extends AppCompatActivity {
         setContentView(R.layout.activity_perfil);
 
 
-
         String foto = getIntent().getExtras().getString("vFoto");
         String nombre = getIntent().getExtras().getString("vNombre");
         double precio = getIntent().getExtras().getDouble("vPrecio");
         String catego = getIntent().getExtras().getString("vDescripcion");
-
 
 
         foto2 = (ImageView) findViewById(R.id.imgFoto);
@@ -44,7 +42,7 @@ public class PerfilActivity extends AppCompatActivity {
         descripcion = (TextView) findViewById(R.id.Descripcion);
 
         titulo.setText(nombre);
-        costo.setText("S/."+ String.valueOf(precio));
+        costo.setText("S/." + String.valueOf(precio));
         descripcion.setText(catego);
 
         Picasso.with(foto2.getContext())

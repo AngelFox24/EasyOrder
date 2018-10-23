@@ -18,7 +18,7 @@ import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
-public class CategoriaAdapter extends RecyclerView.Adapter<CategoriaAdapter.LibroViewHolder>{
+public class CategoriaAdapter extends RecyclerView.Adapter<CategoriaAdapter.LibroViewHolder> {
 
     private List<Categoria> items;
 
@@ -46,7 +46,7 @@ public class CategoriaAdapter extends RecyclerView.Adapter<CategoriaAdapter.Libr
         this.items = items;
     }
 
-    public List<Categoria> getItems(){
+    public List<Categoria> getItems() {
         return this.items;
     }
 

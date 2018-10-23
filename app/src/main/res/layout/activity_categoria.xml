@@ -6,10 +6,15 @@
     android:layout_height="match_parent"
     tools:context=".Categoria.CategoriaActivity">
 
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
     <android.support.v7.widget.RecyclerView
+        android:id="@+id/reciclador"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/reciclador"
+        android:layout_marginTop="55dp"
         android:padding="10dp">
 
     </android.support.v7.widget.RecyclerView>
