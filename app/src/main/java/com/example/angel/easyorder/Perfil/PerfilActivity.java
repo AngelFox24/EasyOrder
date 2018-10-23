@@ -1,23 +1,27 @@
 package com.example.angel.easyorder.Perfil;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.example.angel.easyorder.Categoria.Categoria;
 import com.example.angel.easyorder.R;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class PerfilActivity extends AppCompatActivity {
 
-    private RecyclerView reciclador;
-    private List<Categoria> items = new ArrayList();
-    private RecyclerView.Adapter adapter;
-    private RecyclerView.LayoutManager lManager;
 
+    private ImageView foto2;
+    private TextView titulo;
+    private TextView descripcion;
+    private TextView costo;
 
 
     @Override
@@ -25,23 +29,27 @@ public class PerfilActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_perfil);
 
-        reciclador=(RecyclerView) findViewById(R.id.reciclador);
-        reciclador.setHasFixedSize(true);
 
-        lManager= new LinearLayoutManager(this);
-        reciclador.setLayoutManager(lManager);
 
-        Fill();
+        String foto = getIntent().getExtras().getString("vFoto");
+        String nombre = getIntent().getExtras().getString("vNombre");
+        double precio = getIntent().getExtras().getDouble("vPrecio");
+        String catego = getIntent().getExtras().getString("vDescripcion");
 
+
+
+        foto2 = (ImageView) findViewById(R.id.imgFoto);
+        titulo = (TextView) findViewById(R.id.Titulo);
+        costo = (TextView) findViewById(R.id.valor);
+        descripcion = (TextView) findViewById(R.id.Descripcion);
+
+        titulo.setText(nombre);
+        costo.setText("S/."+ String.valueOf(precio));
+        descripcion.setText(catego);
+
+        Picasso.with(foto2.getContext())
+                .load(foto).into(foto2);
 
     }
-
-    private void Fill() {
-        items.add(new Categoria("Desayunos","https://image.flaticon.com/icons/svg/17/17007.svg"));
-        items.add(new Categoria("Almuerzos","https://banner2.kisspng.com/20180613/wep/kisspng-breakfast-food-lunch-dinner-clip-art-cutlery-icon-5b216bc76ea5a1.9184759815289169354532.jpg"));
-        items.add(new Categoria("Infusiones","http://www.portondelcielo.com/_images/servicios_desayuno.png"));
-        items.add(new Categoria("Postres","https://image.flaticon.com/icons/svg/52/52990.svg"));
-    }
-
 }
 
