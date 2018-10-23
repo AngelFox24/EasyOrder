@@ -11,6 +11,7 @@ public class Shopping_Cart extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shopping__cart);
+        //lol
     }
 
 }
