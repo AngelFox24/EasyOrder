@@ -55,11 +55,11 @@ public class MainActivity extends AppCompatActivity implements ZXingScannerView.
         alerta.show();
         myScanner.stopCamera();*/
 
+
         View v = new View(this);
 
         Bundle Pa = new Bundle();
-        String resta = result.getText().toString();
-        Pa.putString("resultado", resta);
+        Pa.putString("vResultado", result.getText());
 
         Intent Wii = new Intent(v.getContext(), CategoriaActivity.class);
         Wii.putExtras(Pa);

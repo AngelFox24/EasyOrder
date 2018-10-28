@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -23,6 +25,9 @@ public class Shopping_Cart extends AppCompatActivity {
     private TextView txtSubtotal2;
     private TextView txtIgv;
     private TextView txtTotal;
+    private Spinner spnTipoPago;
+    private TextView txtNombreRestaurante;
+    private TextView txtNombreMesa;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +45,9 @@ public class Shopping_Cart extends AppCompatActivity {
         txtSubtotal2 = findViewById(R.id.txtSubtotales);
         txtIgv = findViewById(R.id.txtIgv);
         txtTotal = findViewById(R.id.txtTotal);
+        spnTipoPago = findViewById(R.id.spnTipoPago);
+        txtNombreRestaurante=findViewById(R.id.txtNombreRestaurante);
+        txtNombreMesa=findViewById(R.id.txtNombreMesa);
         //obtener el recicler
 
         reciclador = findViewById(R.id.RecicladorCarrito);
@@ -52,8 +60,14 @@ public class Shopping_Cart extends AppCompatActivity {
         adapter = new PedidoAdapter(items);
         reciclador.setAdapter(adapter);
 
-        SumarTodo();
+        //Adapter del spinner
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.Pagos, R.layout.support_simple_spinner_dropdown_item);
+        spnTipoPago.setAdapter(adapter);
 
+        SumarTodo();
+        String[] variables = getIntent().getExtras().getString("vResultado2").split(";");
+        txtNombreRestaurante.setText(variables[0]);
+        txtNombreMesa.setText("Mesa  "+variables[1]);
     }
 
     private void FillPedidos() {
@@ -69,7 +83,7 @@ public class Shopping_Cart extends AppCompatActivity {
         double total = 0;
 
         for (int i = 0; i < items.size(); i++) {
-            subtotal = subtotal + items.get(i).getPrecio();
+            subtotal = subtotal + (items.get(i).getPrecio()*items.get(i).getCantidad());
         }
         igv = subtotal * 0.18;
         total = subtotal + igv;

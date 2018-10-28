@@ -20,15 +20,19 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="0.5"
+            android:textSize="20dp"
             android:text="Restaurante X"
-            android:textAlignment="center" />
+            android:textAlignment="center"
+            android:id="@+id/txtNombreRestaurante"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="0.5"
+            android:textSize="20dp"
             android:text="Mesa Y"
-            android:textAlignment="center" />
+            android:textAlignment="center"
+            android:id="@+id/txtNombreMesa"/>
 
     </LinearLayout>
 
@@ -115,7 +119,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight=".2"
-            android:text="IGV"
+            android:text="IGV (18%)"
             android:textSize="20dp" />
 
         <TextView
@@ -163,7 +167,8 @@
         <Spinner
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="0.6">
+            android:layout_weight="0.6"
+            android:id="@+id/spnTipoPago">
 
         </Spinner>
 

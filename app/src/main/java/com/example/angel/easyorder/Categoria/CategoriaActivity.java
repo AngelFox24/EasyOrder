@@ -63,9 +63,14 @@ public class CategoriaActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
+        String lol = getIntent().getExtras().getString("vResultado");
+        Bundle nel = new Bundle();
+        nel.putString("vResultado2", lol);
+
         super.onCreateOptionsMenu(menu);
         getMenuInflater().inflate(R.menu.menu_main,menu);
-        menu.findItem(R.id.shopping).setIntent(new Intent(this,Shopping_Cart.class));
+        menu.findItem(R.id.shopping).setIntent(new Intent(this,Shopping_Cart.class).putExtra("vResultado2",lol));
+
         return true;
     }
 
