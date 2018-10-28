@@ -4,7 +4,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
 
 import com.example.angel.easyorder.Categoria.Categoria;
 import com.example.angel.easyorder.Categoria.CategoriaAdapter;
@@ -25,9 +24,19 @@ public class ProductoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_producto);
 
-
+        String nombre = getIntent().getExtras().getString("vNombre");
+        if (nombre.equals("Desayunos")) {
+            FillD();
+        }
+        else if (nombre == "Almuerzos") {
+            FillA();
+        }
+        else if (nombre == "Infusiones") {
+            FillI();
+        }
+        else {
             FillP();
-
+        }
 
 
         reciclador = (RecyclerView) findViewById(R.id.reciclador);
@@ -39,11 +48,7 @@ public class ProductoActivity extends AppCompatActivity {
         adapter = new ProductoAdapter(items);
         reciclador.setAdapter(adapter);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("EasyOrder");
-        toolbar.setLogo(R.drawable.chef44);
-//lol
+
     }
 
     private void FillA() {

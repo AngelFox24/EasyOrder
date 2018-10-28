@@ -1,6 +1,6 @@
 package com.example.angel.easyorder.shopping_cart;
 
-import android.support.annotation.NonNull;
+import android.os.Bundle;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -23,7 +23,7 @@ public class PedidoAdapter extends RecyclerView.Adapter<PedidoAdapter.PedidoView
 
         public PedidoViewHolder(View v){
             super(v);
-            comidaCardView=(CardView)v.findViewById(R.id.detalleCompra);
+            comidaCardView=(CardView)v.findViewById(R.id.cardViewdetalleCompra);
             nombre=(TextView) v.findViewById(R.id.NombreComida);
             cantidad=(TextView) v.findViewById(R.id.CantidadComida);
             precio=(TextView) v.findViewById(R.id.PrecioComida);
@@ -31,7 +31,8 @@ public class PedidoAdapter extends RecyclerView.Adapter<PedidoAdapter.PedidoView
 
     }
     @Override
-    public PedidoAdapter.PedidoViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
+    public PedidoAdapter.PedidoViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
+
         View v = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.item_card,viewGroup,false);
 
         return new PedidoViewHolder(v);
@@ -48,13 +49,12 @@ public class PedidoAdapter extends RecyclerView.Adapter<PedidoAdapter.PedidoView
     @Override
     public void onBindViewHolder(PedidoAdapter.PedidoViewHolder pedidoViewHolder, int i) {
         pedidoViewHolder.nombre.setText(items.get(i).getNombre());
-        pedidoViewHolder.cantidad.setText(items.get(i).getCantidad());
+        pedidoViewHolder.cantidad.setText(String.valueOf(items.get(i).getCantidad()));
         pedidoViewHolder.precio.setText(String.valueOf(items.get(i).getPrecio()));
-
     }
 
     @Override
     public int getItemCount() {
-        return 0;
+        return items.size();
     }
 }

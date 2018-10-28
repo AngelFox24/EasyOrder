@@ -18,12 +18,10 @@
         android:orientation="vertical">
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
             android:layout_marginTop="15dp"
-            android:layout_marginRight="20dp"
-            android:background="#F7D358"
+            android:background="#ff1a1a"
             android:gravity="center">
 
 
@@ -31,10 +29,11 @@
 
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingLeft="34dp"
+                android:paddingHorizontal="20dp"
                 android:text="Bienvenidos a EasyOrder, una forma más rapida de hacer su pedido"
                 android:textColor="#000000"
-                android:textSize="20dp"
+                android:textSize="25dp"
+                android:textAlignment="center"
                 android:textStyle="bold" />
 
 
@@ -42,11 +41,13 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            >
 
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="210dp"
+                android:layout_marginTop="40dp"
                 android:layout_marginLeft="20dp"
                 android:src="@drawable/chef44" />
         </LinearLayout>
@@ -58,8 +59,10 @@
             <Button
                 android:layout_width="160dp"
                 android:layout_height="wrap_content"
+
                 android:layout_marginLeft="112dp"
                 android:onClick="btnEscanear"
+                android:background="@drawable/stylebutton"
                 android:text="Escanear QR"
                 android:textStyle="bold" />
 

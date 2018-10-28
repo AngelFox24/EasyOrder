@@ -25,7 +25,12 @@
             android:value="barcode" />
 
         <activity android:name=".Producto.ProductoActivity" />
-        <activity android:name=".Perfil.PerfilActivity" />
+        <activity android:name=".Perfil.PerfilActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Producto.ProductoActivity"/>
+        </activity>
+
         <activity android:name=".Categoria.CategoriaActivity" />
         <activity android:name=".shopping_cart.Shopping_Cart" />
     </application>
