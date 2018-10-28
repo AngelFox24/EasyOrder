@@ -70,7 +70,7 @@ public class Shopping_Cart extends AppCompatActivity {
         txtNombreMesa.setText("Mesa  "+variables[1]);
     }
 
-    private void FillPedidos() {
+    public void FillPedidos() {
         items.add(new Pedido("Arroz con pollo", 2, 8.5));
         items.add(new Pedido("Causa rellena", 1, 16.2));
         items.add(new Pedido("Lomo Saltado", 3, 9.5));

@@ -70,7 +70,7 @@ public class CategoriaAdapter extends RecyclerView.Adapter<CategoriaAdapter.Libr
             @Override
             public void onClick(View v) {
                 Bundle bundle = new Bundle();
-                bundle.putString("vNombre", items.get(i).getTitulo().toString());
+                bundle.putString("vNombre", items.get(i).getTitulo());
                 //Para otra ocasion joven
 
                 Intent newActivity = new Intent(v.getContext(), ProductoActivity.class);

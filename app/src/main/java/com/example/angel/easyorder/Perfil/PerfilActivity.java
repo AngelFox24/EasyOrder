@@ -6,6 +6,9 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -23,6 +26,8 @@ public class PerfilActivity extends AppCompatActivity {
     private TextView titulo;
     private TextView descripcion;
     private TextView costo;
+    private EditText edtCantidad;
+    private Button btnCarro;
 
 
     @Override
@@ -37,10 +42,12 @@ public class PerfilActivity extends AppCompatActivity {
         String catego = getIntent().getExtras().getString("vDescripcion");
 
 
-        foto2 = (ImageView) findViewById(R.id.imgFoto);
-        titulo = (TextView) findViewById(R.id.Titulo);
-        costo = (TextView) findViewById(R.id.valor);
-        descripcion = (TextView) findViewById(R.id.Descripcion);
+        foto2 = findViewById(R.id.imgFoto);
+        titulo = findViewById(R.id.Titulo);
+        costo = findViewById(R.id.valor);
+        descripcion = findViewById(R.id.Descripcion);
+        edtCantidad = findViewById(R.id.edtCantidad);
+        btnCarro = findViewById(R.id.btnCarro);
 
         titulo.setText(nombre);
         costo.setText("S/." + String.valueOf(precio));
@@ -53,6 +60,10 @@ public class PerfilActivity extends AppCompatActivity {
 
         Picasso.with(foto2.getContext())
                 .load(foto).into(foto2);
+
+    }
+    public void btnAgregar(View v){
+        //Aqui lo agregas a la base de datos
 
     }
 }
