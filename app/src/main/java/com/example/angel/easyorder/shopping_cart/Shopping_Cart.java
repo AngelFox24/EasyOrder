@@ -72,9 +72,15 @@ public class Shopping_Cart extends AppCompatActivity {
 
     public void FillPedidos() {
         items.add(new Pedido("Arroz con pollo", 2, 8.5));
-        items.add(new Pedido("Causa rellena", 1, 16.2));
+        items.add(new Pedido("Causa rellena", 1, 16.5));
         items.add(new Pedido("Lomo Saltado", 3, 9.5));
         items.add(new Pedido("Chancho al Palo", 1, 10.5));
+        items.add(new Pedido("Banana Split  ", 1, 5.50));
+        items.add(new Pedido("Volcan De Chocolate", 2, 7.5));
+        items.add(new Pedido("Tres Leches", 2, 10.0));
+        items.add(new Pedido("Desayuno Americano", 1, 7.5));
+        items.add(new Pedido("Desayuno Deluxe", 1, 4.5));
+        items.add(new Pedido("Pan con Nada", 1, 2.5));
     }
 
     private void SumarTodo() {

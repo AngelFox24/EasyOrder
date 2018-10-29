@@ -24,19 +24,7 @@ public class ProductoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_producto);
 
-        String nombre = getIntent().getExtras().getString("vNombre");
-        if (nombre.equals("Desayunos")) {
-            FillD();
-        }
-        else if (nombre == "Almuerzos") {
-            FillA();
-        }
-        else if (nombre == "Infusiones") {
-            FillI();
-        }
-        else {
-            FillP();
-        }
+        FillD();
 
 
         reciclador = (RecyclerView) findViewById(R.id.reciclador);

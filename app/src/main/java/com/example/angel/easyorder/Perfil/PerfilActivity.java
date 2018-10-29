@@ -57,6 +57,7 @@ public class PerfilActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("EasyOrder");
         toolbar.setLogo(R.drawable.chef44);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         Picasso.with(foto2.getContext())
                 .load(foto).into(foto2);
